@@ -1,7 +1,7 @@
 name: Build Kernel
 
 on:
-  push:
+  #push:
   workflow_dispatch:
 
 jobs:
@@ -47,7 +47,7 @@ jobs:
         run: |
           BUILD_DATE="$(date '+%H:%M %d/%m/%Y')"
           HEAD="$(git rev-parse HEAD)"
-          HEAD_COMMIT="https://github.com/xradens/msm-4.14/commit/$HEAD"
+          HEAD_COMMIT="https://github.com/roters-os/msm-4.14/commit/$HEAD"
           echo -e "${BUILD_DATE}\n\n${HEAD_COMMIT}" > caption.txt
 
       - name: Upload standard build to Telegram
