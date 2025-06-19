@@ -5,7 +5,7 @@
 # Copyright (C) 2025 xradens
 
 SECONDS=0 # builtin bash timer
-BRANCH="Azure"
+BRANCH="oss"
 ZIPNAME="RotersOS-kernel_A13-A15.zip"
 TC_DIR="$(pwd)/tc/clang-20"
 AK3_DIR="$(pwd)/android/AnyKernel3"
