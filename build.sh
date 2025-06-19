@@ -6,7 +6,7 @@
 
 SECONDS=0 # builtin bash timer
 BRANCH="Azure"
-ZIPNAME="RotersOS-kernel_A11-A12.zip"
+ZIPNAME="RotersOS-kernel_A13-A15.zip"
 TC_DIR="$(pwd)/tc/clang-20"
 AK3_DIR="$(pwd)/android/AnyKernel3"
 DEFCONFIG="surya_defconfig"
