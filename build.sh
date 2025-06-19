@@ -85,7 +85,7 @@ for arg in "$@"; do
 			;;
 		-s|--su)
 			ENABLE_KSU=true
-			ZIPNAME="${ZIPNAME/RotersOS-kernel_A11-A12/RotersOS-kernel_A11-A12-KSU+SuSFS}"
+			ZIPNAME="${ZIPNAME/RotersOS-kernel_A13-A15/RotersOS-kernel_A13-A15-KSU+SuSFS}"
 			;;
 		*)
 			echo "Unknown argument: $arg"
@@ -126,7 +126,7 @@ if [ -f "$kernel" ] && [ -f "$dtb" ] && [ -f "$dtbo" ]; then
 	cp $kernel $dtb $dtbo AnyKernel3
 	sed -i "s/device\.name1=.*/device.name1=surya/" AnyKernel3/anykernel.sh
 	sed -i "s/device\.name2=.*/device.name2=karna/" AnyKernel3/anykernel.sh
-	sed -i "s/supported\.versions=.*/supported.versions=11-12/" AnyKernel3/anykernel.sh
+	sed -i "s/supported\.versions=.*/supported.versions=13-15/" AnyKernel3/anykernel.sh
 	cd AnyKernel3
 	git checkout $BRANCH &> /dev/null
 	zip -r9 "../$ZIPNAME" * -x .git modules\* patch\* ramdisk\* README.md *placeholder
